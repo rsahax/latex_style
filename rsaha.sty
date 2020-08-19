@@ -1,0 +1,168 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{rsaha}
+
+\RequirePackage{amsthm, amsfonts, amssymb, amsmath,  titlesec, color, graphicx, fullpage, float, wasysym, titling, enumerate, bbm, dsfont}
+
+%\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+
+\usepackage{mdframed}
+\usepackage{lipsum, tcolorbox, adjustbox, tikz-cd}
+
+\RequirePackage[colorlinks=true,
+linkcolor=webgreen,
+filecolor=webbrown,
+citecolor=webgreen]{hyperref}
+
+\usepackage{fullpage}
+\usepackage{float, framed}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+
+\RequirePackage[margin=1in]{geometry}
+% \RequirePackage[left=1 in, right = 1 in]{geometry}
+
+\titleformat{\section}	{\vspace{.3 in}\centering\Large\bf}{\thesection.}{1.5em}{}
+
+%\setmainfont{Georgia}
+
+%define theorems definitions and remarks
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{fact}{Fact}
+\newtheorem{identity}{Identity}
+
+\theoremstyle{definition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem*{question}{Question}
+\newtheorem*{acknowledgement}{Acknowledgement}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem*{solution}{Solution}
+
+\theoremstyle{remark}
+\newtheorem*{hint}{Hint}
+\newtheorem*{example}{Example}
+
+
+\numberwithin{equation}{section}
+\numberwithin{problem}{section}
+\numberwithin{corollary}{section}
+\numberwithin{theorem}{section}
+\numberwithin{lemma}{section}
+\numberwithin{fact}{section}
+\numberwithin{proposition}{section}
+\numberwithin{definition}{section}
+\numberwithin{identity}{section}
+
+%undefined macros defined
+%\newcommand{\g}{\gamma}
+\newcommand{\e}{\epsilon}
+\newcommand{\p}{\phi}
+\newcommand{\s}{\sigma}
+\newcommand{\z}{\zeta}
+\newcommand{\w}{\omega}
+%override already defined macros
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\renewcommand{\c}{\chi}
+\renewcommand{\d}{\delta}
+\renewcommand{\t}{\theta}
+\renewcommand{\i}{\infty}
+\renewcommand{\k}{\kappa}
+\renewcommand{\l}{\lambda}
+\renewcommand{\o}{\omega}
+\renewcommand{\r}{\rho}
+\renewcommand{\t}{\varphi}
+\renewcommand{\u}{\upsilon}
+
+
+%define var commands
+\newcommand{\vp}{\varphi}
+
+%define mathbb commands 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\1}{\mathds{1}}
+
+% nice g 
+\newcommand*{\g}{\text{\fontfamily{cmr}\slshape g}}
+
+%define mathfrak commands 
+\newcommand{\fp}{\mathfrak{p}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fq}{\mathfrak{q}}
+\newcommand{\fa}{\mathfrak{a}}
+\newcommand{\fb}{\mathfrak{b}}
+\newcommand{\fg}{\mathfrak{g}}
+\newcommand{\fh}{\mathfrak{h}}
+\newcommand{\fn}{\mathfrak{n}}
+\newcommand{\fm}{\mathfrak{m}}
+\newcommand{\fo}{\mathfrak{o}}
+\newcommand{\fs}{\mathfrak{s}}
+\newcommand{\fl}{\mathfrak{l}}
+\newcommand{\fD}{\mathfrak{D}}
+
+%define mathcal commands 
+\newcommand{\co}{\mathcal{O}}
+\newcommand{\cN}{\mathcal{N}}
+
+%define custom commands
+\newcommand{\lcm}{\mbox{lcm}}
+\newcommand{\ord}{\mbox{ord}}
+\newcommand{\sym}{\text{Sym}}
+\newcommand{\tr}{\text{Tr}}
+\newcommand{\diag}{\text{diag}}
+\newcommand{\Emb}{\text{Emb}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Rad}{\textbf{Rad}}
+\newcommand{\normal}{\unlhd}
+\newcommand{\im}{\text{im }} 
+\newcommand{\x}{\times}
+\newcommand{\union}{\cup}
+\newcommand{\intersect}{\cap}
+\newcommand{\tensor}{\otimes}
+
+% legendre symbol 
+\newcommand{\dlegendre}[2]{\genfrac{(}{)}{}{}{#1}{#2}}
+
+%colors
+\definecolor{tcbpurple}{RGB}{76, 76, 179}
+\definecolor{tcbpink}{RGB}{255, 243, 243}
+\definecolor{tcborange}{RGB}{255, 128, 0}
+
+%boxes 
+\newtcolorbox{tcblite}[2][]
+{
+  colframe = tcbpurple,
+  colback  = tcbpink,  
+  title    = {#2},
+  #1,
+}
+
+\newtcolorbox{tcbbright}[2][]
+{
+  colframe = tcborange,
+  colback  = tcbpink,  
+  title    = {#2},
+  #1,
+}
+
+
+\endinput
+
